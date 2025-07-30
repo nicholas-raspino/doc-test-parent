@@ -1,0 +1,3 @@
+[submodule "docs/clients/doc-test-submodule"]
+	path = docs/clients/doc-test-submodule
+	url = https://github.com/nicholas-raspino/doc-test-submodule
