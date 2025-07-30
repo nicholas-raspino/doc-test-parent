@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           # token: ${{ steps.app-token.outputs.token }}
-          token: ${{ secrets.nich1370_PAT}}
+          token: ${{ secrets.NICH1370_PAT}}
           fetch-depth: 0
           submodules: recursive
           # Make sure the value of GITHUB_TOKEN will not be persisted in repo's config
