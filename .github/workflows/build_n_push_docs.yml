@@ -10,9 +10,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check out repository
+        # - uses: actions/create-github-app-token@v2
+        #   id: app-token
+        #   with:
+        #     # required
+        #     app-id: ${{ vars.DOCS_SITE_GET_TOKEN_APP_ID }}
+        #     private-key: ${{ secrets.DOCS_SITE_GET_TOKEN_PRIVATE_KEY }}
+        #     owner: ${{ github.repository_owner }}
         uses: actions/checkout@v4
         with:
+          # token: ${{ steps.app-token.outputs.token }}
+          token: ${{ secrets.nich1370_PAT}}
           fetch-depth: 0
+          submodules: recursive
+          # Make sure the value of GITHUB_TOKEN will not be persisted in repo's config
+          persist-credentials: true
       - name: set up python
         uses: actions/setup-python@v5
         id: setuppythonstep
